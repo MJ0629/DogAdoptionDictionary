@@ -1,0 +1,1568 @@
+@charset "utf-8";
+* {margin: 0; padding: 0; border: 0;}
+ul {list-style: none;}
+a {text-decoration: none; color: inherit;}
+/* CSS초기화 세팅 */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+/* 전체 폰트 NOTO SANS 본고딕체 */
+
+@font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;}
+/* 강조 폰트 둘기마요체 */
+html,
+body {font-family: 'Noto Sans KR', sans-serif; scroll-behavior: smooth;}
+
+/*
+    주조색 :   #f4d35e
+    보조색 :   #ee964b
+    강조색 :   #0d3b66
+    #faf0ca
+    #f95738
+ */
+
+/* 공통 영역 */
+section {
+    width: 100%;
+    padding-bottom: 100px;
+}
+.inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+.txtBlind {
+    width: 0 !important;
+    height: 0 !important;
+    display: block;
+    text-indent: -99999px;
+}
+.btn {
+    width: 40px;
+    height: 40px;
+    display: block;
+    cursor: pointer;
+    background-color: #faf0ca;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+.btn:hover {
+    background-color: #fff;
+}
+.disabled {
+    display: none;
+}
+.prev {
+    position: absolute;
+    left: 0;
+}
+.next {
+    position: absolute;
+    right: 0;
+}
+/* 강아지 설명, 강아지 주의사항 공통 시작 */
+.common_container {
+    padding: 65px 0 100px;
+}
+.common_title {
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 40px;
+    display: flex;
+}
+.common_visual_wrap {
+    width: 100%;
+    height: 520px;
+    display: flex;
+    margin: auto;
+    margin-bottom: 60px;
+}
+.common_info_img {
+    width: 50%;
+    height: 100%;
+}
+.common_info_desc {
+    width: 50%;
+    height: 100%;
+}
+
+/* 강아지 설명, 강아지 주의사항 공통 끝 */
+/* 공통 영역 끝 */
+
+
+/* 헤더 영역 시작 */
+.header {
+    width: 100%;
+    padding-top: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    background-color: #faf0ca;
+    z-index: 999;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+.header_top {
+    top: 0 !important;
+}
+.header_title {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    font-size: 2.3rem;
+    color: #ee964b;
+    letter-spacing: 11px;
+} 
+.nav {
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #f4d35e;
+    border-bottom: 1px solid #f4d35e;
+}
+.header_menu {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Dovemayo_gothic';
+}
+.header_menu li {
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    border-right: 1px solid #f4d35e;
+}
+.header_menu li:first-child {
+    border-left: 1px solid #f4d35e;
+}
+.header_menu li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ee964b;
+    font-size: 1.2rem;
+}
+.header_menu li:hover a{
+    background-color: #f4d35e;
+    color: #fff;
+}
+/* 헤더 영역 끝 */
+
+/* 메인 비쥬얼 영역 시작 */
+.main_visual {
+    background-color: #faf0ca;
+    z-index: -1;
+}
+.main_visual>.inner {
+    padding-top: 300px;
+}
+.main_visual_img {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: #faf0ca;
+    overflow: hidden;
+    margin: auto;
+    border: 20px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    -webkit-animation: main_visual_img 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) .2s both;
+	        animation: main_visual_img 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) .2s both;
+}
+@-webkit-keyframes main_visual_img {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes main_visual_img {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+/* 메인 비쥬얼 영역 끝 */
+
+/* 강아지 견종 설명 시작 */
+.dog_information {
+    z-index: -1;
+    background-color: #f4d35e;
+}
+.dog_info_visual_wrap {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.dog_info_visual_wrap ul {
+    height: 100%;
+    display: flex;
+    position: absolute;
+}
+.dog_info_visual_wrap>ul>li {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.dog_info_slideBtn {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-20px);
+}
+
+.dog_info_title {
+    display: flex;
+    justify-content: center;
+}
+.dog_info_title span {
+    width: 70px;
+    height: 70px;
+    display: block;
+    cursor: pointer;
+    margin-left: 30px;
+}
+.dog_info_title span:first-child {
+    background: url(../img/maltese_illust.png) no-repeat center;
+    background-size: 90%;
+}
+.dog_info_title span:nth-child(2) {
+    background: url(../img/poodle_illust.png) no-repeat center;
+    background-size: 90%;
+}
+.dog_info_title span:nth-child(3) {
+    background: url(../img/shistzu_illust.png) no-repeat center;
+    background-size: 90%;
+}
+.dog_info_title span:last-child {
+    background: url(../img/bichon_illust.png) no-repeat center;
+    background-size: 90%;
+}
+/* 강아지 인디케이터 애니메이션 시작 */
+.dog_info_title span:hover {
+    -webkit-animation: shakingDog 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+	        animation: shakingDog 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+}
+@-webkit-keyframes shakingDog {
+    0%,
+    100% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    10% {
+      -webkit-transform: rotate(8deg);
+              transform: rotate(8deg);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: rotate(-10deg);
+              transform: rotate(-10deg);
+    }
+    30%,
+    50%,
+    70% {
+      -webkit-transform: rotate(10deg);
+              transform: rotate(10deg);
+    }
+    80% {
+      -webkit-transform: rotate(-8deg);
+              transform: rotate(-8deg);
+    }
+    90% {
+      -webkit-transform: rotate(8deg);
+              transform: rotate(8deg);
+    }
+  }
+  @keyframes shakingDog {
+    0%,
+    100% {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    10% {
+      -webkit-transform: rotate(8deg);
+              transform: rotate(8deg);
+    }
+    20%,
+    40%,
+    60% {
+      -webkit-transform: rotate(-10deg);
+              transform: rotate(-10deg);
+    }
+    30%,
+    50%,
+    70% {
+      -webkit-transform: rotate(10deg);
+              transform: rotate(10deg);
+    }
+    80% {
+      -webkit-transform: rotate(-8deg);
+              transform: rotate(-8deg);
+    }
+    90% {
+      -webkit-transform: rotate(8deg);
+              transform: rotate(8deg);
+    }
+  }
+  
+/* 강아지 인디케이터 애니메이션 끝 */
+.dog_info_img {
+    width: 40%;
+    border: 10px solid #fff;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.dog_info_desc {
+    width: 60%;
+    padding: 40px;
+    box-sizing: border-box;
+}
+.dog_info_desc_tit {
+    text-align: center;
+    border-radius: 40px;
+    border: 2px solid #0d3b66;
+    color: #0d3b66;
+    padding: 5px 30px;
+    box-sizing: border-box;
+}
+.dog_info_desc p {
+    padding: 20px 10px 0;
+    text-overflow: ellipsis;
+    white-space:pre-line;
+    color: #555;
+    font-size: .95rem;
+}
+
+.maltese_img {
+    background-image: url(../img/892b640b5b825c5edc6a90ef01ceac95.jpg);
+}
+.poodle_img {
+    background-image: url(../img/25c7661e250c18ee3f1c2cbb0dbfd9dc.jpg);
+}
+.shihtzu_img {
+    background-image: url(../img/01dbb1ea539d5a78f8619065861d7c08.jpg);
+}
+.bichon_img {
+    background-image: url(../img/0569239f3c3187e37c0b7198804a377a.jpg);
+}
+.maltese_desc .dog_info_desc_tit {
+    background-color: #ee964b;
+}
+.poodle_desc .dog_info_desc_tit {
+    background-color: #f3a38b;
+}
+.shihtzu_desc .dog_info_desc_tit {
+    background-color: #8bacf3;
+}
+.bichon_desc .dog_info_desc_tit {
+    background-color: #f38bee;
+}
+/* 강아지 견종 설명 끝 */
+
+/* 강아지 입양 정보 & 필요한 물품 시작 */
+.adobt_information {
+    padding: 150px 0;
+    background-color: #0d3b66;
+}
+.adobt_info_visual {
+    width: 100%;
+    min-height: 500px;
+    background: url(../img/adobt_info_bg.png) center;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.adobt_info_title {
+    padding: 15px 30px;
+    background-color: thistle;
+    text-align: center;
+    position: absolute;
+    border-right: 3px solid rgb(172, 146, 172);
+    border-bottom: 3px solid rgb(172, 146, 172);
+    color: #0d3b66;
+}
+.adobt_menu_name {
+    position: absolute;
+    padding: 20px 40px;
+    color: #0d3b66;
+    z-index: 1;
+    font-family: 'Dovemayo_gothic';
+    transition: 1s;
+}
+.adobt_menu_01 {
+    left: 150px;
+    top: 150px;
+    background-color: #f4d35e;
+    transform: rotate(-10deg);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .1);
+
+}
+.adobt_menu_02 {
+    right: 200px;
+    bottom: 90px;
+    background-color: #ee964b;
+    box-shadow: -2px -2px 10px rgba(0, 0, 0, .2);
+}
+.adobt_info_family {
+    background : url(../img/adobt_info_img.jpg) no-repeat center;
+    border: 10px solid #f4d35e;
+    bottom: 50px;
+    left: 200px;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.adobt_info_family>div {
+    width: 350px;
+    height: 350px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Dovemayo_gothic';
+    display: none;
+    position: relative;
+}
+.breeder {
+    margin-right: 10%;
+}
+.adobt_info_family>div>figure {
+    width: 336px;
+    height: 338px;
+    background-color: #f4d35e;
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+.adobt_info_family>.breeder>figure{
+    background-color: #0d3b66;
+}
+.adobt_info_family>div>figure>figcaption {
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #333;
+    font-size: 1rem;
+    padding: 24px 10px;
+    box-sizing: border-box;
+    text-align: left;
+}
+.adobt_info_family .plus_btn {
+    width: 50px;
+    height: 50px;
+    display: block;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px #ccc;
+    color: #0d3b66;
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    z-index: 1;
+}
+.adobt_info_family .plus_btn:hover {
+    background-color: #eee;
+}
+.howto {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 10;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.howtoConts {
+    width: 1000px;
+    height: 600px;
+    background-color: #fff;
+    position: relative;
+    padding: 70px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.howtoConts>p{
+    font-size: 14px;
+    letter-spacing: -.5px;
+}
+.howto_frame {
+    width: 336px;
+    height: 338px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    border: 2px solid #000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.breeder .howto_frame {
+    background-image: url(../img/breeder_conts.jpg);
+    background-size: cover;
+}
+.shelter .howto_frame {
+    background-image: url(../img/adobt_info_img.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+.howto_frame>div {
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    position: absolute;
+    display: flex;
+}
+.howto_frame_top {
+    top: 0;
+    left: 0;
+    border-bottom: 2px solid #000;
+    color: #222;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1;
+}
+.howto_frame_profile {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 16px 0 10px;
+}
+.breeder .howto_frame_profile {
+    background-color: #0d3b66;
+}
+.shelter .howto_frame_profile {
+    background-color: #f4d35e;
+}
+.howto_frame_profile img {
+    width: 80%;
+}
+.howto_frame_top span {
+    font-size: 12px;
+}
+.howto_frame_bottom {
+    bottom: 0;
+    left: 0;
+    border-top: 2px solid #000;
+    color: #000;
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    box-sizing: border-box;
+}
+.howto_frame_bottom i {
+    margin-right: 20px;
+}
+.howtoConts_txt_container {
+    width: 56%;
+    padding-right: 26px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+}
+.howtoConts_title {
+    margin-bottom: 12px;
+    color: #444;
+    font-size: 1rem;
+}
+.howtoConts_title span{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #000;
+}
+.howtoConts_text {
+    color: #666;
+    font-size: .9rem;
+    line-height: 1.4;
+}
+.howtoConts button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    font-size: 26px;
+    background-color: #fff;
+}
+.howtoConts>button:hover {
+    color: #ccc;
+}
+.adobt_info_goods {
+    background : url(../img/adobt_goods.png) no-repeat center;
+    border: 10px solid #ee964b;
+    bottom: 120px;
+    right: 200px;
+    transition: 1s;
+    position: relative;
+}
+.adobt_info_goods div {
+    position: absolute;
+    cursor: pointer;
+}
+.dog_house {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    top: 30%;
+    left: 20%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+.dog_bowl {
+    top: 50%;
+    left: 40%;
+}
+.dog_food {
+    top: 20%;
+    right: 40%;
+}
+.dog_cushion {
+    bottom: 10%;
+    left: 20%;
+    transform: rotate(-10deg);
+}
+.dog_necklace {
+    right: 60px;
+    bottom: 50px;
+    transform: rotate(-5deg);
+}
+.dog_shampoo {
+    top: 50%;
+    right: 20%;
+    transform: rotate(10deg);
+}
+.adobt_menu {
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+    background-size: cover;
+    cursor: pointer;
+    position: absolute;
+}
+.star_img {
+    width: 40px;
+    height: 40px;
+    background: url(../img/star_img.png) no-repeat center;
+    background-size: cover;
+    position: absolute;
+    left: 100px;
+    bottom: 100px;
+    transform: rotate(45deg);
+}
+.heart_img {
+    width: 60px;
+    height: 60px;
+    background: url(../img/heart_img.png) no-repeat center;
+    background-size: 95%;
+    position: absolute;
+    top: 50px;
+    right: 200px;
+    transform: rotate(15deg);
+}
+.adobt_info_family:hover {
+    -webkit-animation: dogInfoTop 0.8s both;
+	        animation: dogInfoTop 0.8s both;
+}
+.adobt_info_goods:hover {
+    -webkit-animation: dogInfoBottom 0.8s both;
+	        animation: dogInfoBottom 0.8s both;
+}
+.adobt_btn {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    color: #0d3b66;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: none;
+}
+.adobt_menu_name.adobt_menu_01.active {
+    top: 0;
+    left: 0;
+    padding: 15px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+    transform: rotate(0);
+}
+.adobt_menu.adobt_info_family.active {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: unset;
+    background: unset;
+    animation: unset;
+    cursor: unset;
+}
+.adobt_menu_name.adobt_menu_02.active {
+    padding: 15px 30px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+    transform: rotate(0) translate(-787px, -348px);
+    box-shadow: unset;
+}
+.adobt_menu.adobt_info_goods.active {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: unset;
+    background: unset;
+    animation: unset;
+    cursor: unset;
+}
+/* 강아지 인포 애니메이션 시작 */
+@-webkit-keyframes dogInfoTop {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(6deg);
+              transform: translateX(-30px) rotate(6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(-6deg);
+              transform: translateX(15px) rotate(-6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(3.6deg);
+              transform: translateX(-15px) rotate(3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(-2.4deg);
+              transform: translateX(9px) rotate(-2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(1.2deg);
+              transform: translateX(-6px) rotate(1.2deg);
+    }
+  }
+  @keyframes dogInfoTop {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(6deg);
+              transform: translateX(-30px) rotate(6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(-6deg);
+              transform: translateX(15px) rotate(-6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(3.6deg);
+              transform: translateX(-15px) rotate(3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(-2.4deg);
+              transform: translateX(9px) rotate(-2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(1.2deg);
+              transform: translateX(-6px) rotate(1.2deg);
+    }
+  }
+
+  @-webkit-keyframes dogInfoBottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+  @keyframes dogInfoBottom {
+    0%,
+    100% {
+      -webkit-transform: translateX(0%);
+              transform: translateX(0%);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+    }
+    15% {
+      -webkit-transform: translateX(-30px) rotate(-6deg);
+              transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      -webkit-transform: translateX(15px) rotate(6deg);
+              transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      -webkit-transform: translateX(-15px) rotate(-3.6deg);
+              transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      -webkit-transform: translateX(9px) rotate(2.4deg);
+              transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      -webkit-transform: translateX(-6px) rotate(-1.2deg);
+              transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+  
+/* 강아지 인포 애니메이션 끝 */
+
+/* 강아지 입양 정보 & 필요한 물품 끝 */
+/* 강아지 양육 정보 시작 */
+.bringup_information {
+    padding: 150px 0;
+    background-color: #ee964b;
+}
+.bringup_information h2 {
+    display: inline;
+    padding: 15px 30px;
+    background-color: #ffd8cb;
+    border-left: 4px solid #f3a38b;
+    border-bottom: 4px solid #f3a38b;
+    color: #ee964b;
+}
+.bringup_menu {
+    width: 100%;
+    padding: 120px 0 80px;
+    display: flex;
+    justify-content: center;
+}
+.bringup_menu button {
+    margin-left: 45px;
+    padding: 16px 44px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    background-color: #f4d35e;
+    color: #0d3b66;
+    border: 3px solid #0d3b66;
+    box-sizing: border-box;
+    transition: .5s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    position: relative;
+    font-family: 'Dovemayo_gothic';
+}
+.bringup_menu .bringup_btnEvents {
+    background-color: #0d3b66;
+    color: #fff;
+    box-shadow: none;
+    pointer-events: none;
+}
+.bringup_menu>button:hover {
+    background-color: #0d3b66;
+    color: #fff;
+    -webkit-animation: shakingDog 1s cubic-bezier ease-in-out 2 both;
+	    animation: shakingDog 1s ease-in-out 2 both;
+}
+.bringup_visual_wrap {
+    position: relative;
+}
+.bringup_visual_wrap ul {
+    width: 100%;
+    position: relative;
+}
+.bringup_visual_wrap .bringup_slideBtn{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-20px);
+}
+.bringup_conts {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+.bringup_conts>ul, .bringup_conts>ul>li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.bringup_conts>ul {
+    width: 300%;
+}
+.bringup_conts .common_info_img {
+    width: 40%;
+    border: 10px solid #fff;
+    box-sizing: border-box;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, .1);
+}
+.bringup_conts .common_desc {
+    width: 60%;
+    padding: 0 60px 20px 20px;
+    box-sizing: border-box;
+}
+.traning_tit {
+    display: inline-block;
+    padding: 14px 50px;
+    text-align: center;
+    background-color:#507496;
+    color: #fff;
+    font-family: 'Dovemayo_gothic';
+    font-size: 1.6rem;
+    letter-spacing: 4px;
+    font-weight: normal;
+    border-left: 4px solid #334a5f;
+    border-bottom: 4px solid #334a5f;
+    margin-bottom: 30px;
+}
+.training span {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    color: #0d3b66;
+    font-family: 'Dovemayo_gothic';
+}
+.training p {
+    margin-bottom: 26px;
+    color: #222;
+    line-height: 1.4;
+}
+.training_hand .common_info_img {
+    background: url(../img/dog_hand.jpg) no-repeat center;
+    background-size: 100%;
+}
+.training_sit .common_info_img {
+    background: url(../img/dog_sit.jpg) no-repeat center;
+    background-size: cover;
+    background-color: #507496;
+}
+.training_wait .common_info_img {
+    background: url(../img/dog_wait.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.signal_tit {
+    display: inline-block;
+    padding: 14px 50px;
+    text-align: center;
+    background-color:#ffd8cb;
+    color: #ee964b;
+    font-family: 'Dovemayo_gothic';
+    font-size: 1.6rem;
+    letter-spacing: 4px;
+    font-weight: normal;
+    border-left: 4px solid #ff9b7a;
+    border-bottom: 4px solid #dd6d47;
+    margin-bottom: 20px;
+}
+.signal span {
+    color: #ffd8cb;
+    font-family: 'Dovemayo_gothic';
+    font-size: 1.3rem;
+}
+.signal_tilt .common_info_img{
+    background: url(../img/signal_tilt.jpg) no-repeat center;
+    background-size: cover;
+}
+.signal_lickingnose .common_info_img{
+    background: url(../img/signal_lickingnose.jpg) no-repeat center;
+    background-size: cover;
+}
+.signal_yawn .common_info_img{
+    background: url(../img/signal_yawn.jpg) no-repeat center bottom;
+    background-size: cover;
+}
+.know_tit {
+    display: inline-block;
+    padding: 14px 50px;
+    text-align: center;
+    background-color:#ffefcb;
+    color: #ee964b;
+    font-family: 'Dovemayo_gothic';
+    font-size: 1.6rem;
+    letter-spacing: 4px;
+    font-weight: normal;
+    border-left: 4px solid #ff9b7a;
+    border-bottom: 4px solid #dd6d47;
+    margin-bottom: 20px;
+}
+
+.know_walking .common_info_img {
+    background: url(../img/know_walk.jpg) no-repeat center;
+    background-size: cover;
+}
+.know_sleep .common_info_img {
+    background: url(../img/know_sleep.jpg) no-repeat center;
+    background-size: cover;
+}
+.know_water .common_info_img {
+    background: url(../img/know_water.jpg) no-repeat center;
+    background-size: cover;
+}
+/* 강아지 양육 정보 끝 */
+
+/* 강아지 주의사항 시작 */
+.caution {
+    background-color: #f4d35e;
+    padding-top: 0;
+    overscroll-behavior: none;
+}
+.caution_line {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    border-top: 8px solid #333;
+}
+.caution_line>div {
+    width: 40px;
+    height: 80px;
+    background-color: #333;
+    transform: skew(-25deg);
+}
+.caution_title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+.caution_visual_wrap {
+    width: 100%;
+    min-height: 500px;
+    overflow: hidden;
+}
+.cautionText_container {
+    height: 100%;
+    margin: auto;
+    padding: 30px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cautionText {
+    width: 100%;
+    background-color: #222;
+    color: #f4d35e;
+    font-size: 20px;
+    font-weight: bold;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 강아지 주의사항 끝 */
+
+
+
+/* 미디어 쿼리 1200px 사이즈 시작 */
+@media screen and (max-width:1200px) {
+    /* 공통*/
+    .inner {
+        width: 96%;
+    }
+
+    /* 헤더영역 시작 */
+    .header_menu li:first-child {
+        border-left: 0;
+    }
+    .header_menu li:last-child {
+        border-right: 0;
+    }    
+    .header_menu li a {
+        font-size: 1rem;
+    }
+    /* 헤더영역 끝 */
+
+    /* 메인 비쥬얼 시작 */
+    .main_visual>.inner {
+        padding-top:  30vh;
+    }
+    /* 메인 비쥬얼 끝 */
+
+    /* 강아지 견종설명 시작 */
+    .dog_info_title span {
+        margin-left: 4vw;
+    }
+    .dog_info_desc {
+        padding: 2vw;
+    }
+    .dog_info_desc_tit {
+        padding: 5px 2vw;
+    }
+    /* 강아지 견종설명 끝 */
+    /* 강아지 입양 정보 & 필요한 물품 시작 */
+    .adobt_info_title {
+        padding: 1.2vw 2.3vw;
+        font-size: 1.5rem;
+    }
+    .adobt_menu_name {
+        padding: 1.7vw 3.3vw;
+    }
+    .adobt_menu_01 {
+        left: 12%;
+        top: 30%;
+    }
+    .adobt_menu_02 {
+        right: 16.7%;
+        bottom: 18%;
+    }
+    .adobt_info_family {
+        top: 30%;
+        left: 16.6%;
+    }
+    .adobt_info_family>div {
+        width: 29vw;
+        height: 29vw;
+    }
+    .adobt_info_family>div>figure {
+        width: 96%;
+        height: 96%;
+        padding-top: 8.3vw;
+    }
+    .adobt_info_family>div>figure>figcaption {
+        height: 8.3vw;
+    }
+    .adobt_info_family .plus_btn {
+        bottom: 30px;
+    }
+    .howtoConts {
+        width: 83.5vw;
+        height: 50vw;
+        padding: 4vw;
+    }
+    .howtoConts>p{
+        font-size: 14px;
+        letter-spacing: -.5px;
+    }
+    .howto_frame {
+        width: 36%;
+        height: 70%;
+    }
+    .howto_frame>div {
+        height: 18%;
+    }
+    .howto_frame_profile {
+        width: 3.3vw;
+        height: 3.3vw;
+    }
+    .howto_frame_bottom {
+        font-size: 1.5rem;
+    }
+    .howto_frame_bottom i {
+        margin-right: 16px;
+    }
+    .howtoConts_txt_container {
+        width: 59%;
+    }
+    .adobt_info_goods {
+        bottom: 24%;
+        right: 16.7%;
+    }
+    /* .dog_house {
+        width: 82px;
+        height: 82px;
+        border-radius: 50%;
+        top: 30%;
+        left: 20%;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    }
+    .dog_bowl {
+        top: 50%;
+        left: 40%;
+    }
+    .dog_food {
+        top: 20%;
+        right: 40%;
+    }
+    .dog_cushion {
+        bottom: 10%;
+        left: 20%;
+        transform: rotate(-10deg);
+    }
+    .dog_necklace {
+        right: 60px;
+        bottom: 50px;
+        transform: rotate(-5deg);
+    }
+    .dog_shampoo {
+        top: 50%;
+        right: 20%;
+        transform: rotate(10deg);
+    } */
+    .adobt_menu {
+        width: 25vw;
+        height: 25vw;
+    }
+    .star_img {
+        left: 8.35%;
+        bottom: 20%;
+    }
+    .heart_img {
+        top: 10%;
+        right: 16.7%;
+    }
+    .adobt_menu_name.adobt_menu_01.active {
+        font-size: 1.4rem;
+    }
+    .adobt_menu_name.adobt_menu_02.active {
+        font-size: 1.4rem;
+    }
+    /* 강아지 입양 정보 & 필요한 물품 끝 */
+    /* 강아지 양육 정보 시작 */
+    .bringup_menu {
+        padding: 10vw 0 6.7vw;
+    }
+    .bringup_menu button {
+        margin-left: 5vw;
+        padding: 16px 4vw;
+    }
+    .traning_tit {
+        padding: 14px 4.4vw;
+        margin-bottom: 3.5vh;
+    }
+    .training span {
+        margin-bottom: 2.5vh;
+    }
+    .training p {
+        margin-bottom: 2vh;
+    }
+    .signal_tit {
+        padding: 14px 4.4vw;
+        margin-bottom: 3.5vh;
+    }
+    .know_tit {
+        padding: 14px 4.4vw;
+        margin-bottom: 3.5vh;
+    }
+    /* 강아지 양육 정보 끝 */
+
+    /* 강아지 주의사항 시작 */
+    .caution_line {
+        height: 12vw;
+    }
+    .caution_line>div {
+        width: 4vw;
+        height: 6vw;
+        margin-right: 2vw;
+    }
+    .caution_line>div:nth-child(3n) {
+        display: none;
+    }
+    .cautionText {
+        height: 9.2vh;
+    }
+    .caution .inner {
+        width: 100%;
+    }
+
+    /* 강아지 주의사항 끝 */
+}
+/* 미디어 쿼리 1200px 사이즈 끝 */
+
+
+
+/* 미디어쿼리 태블릿 시작 */
+@media screen and (max-width:768px) {
+    .inner {
+        width: 90%;
+    }
+    /* 헤더 영역 시작 */
+    .header {
+        padding-top: 30px;
+        box-shadow: 0 0 5px #ee964b80;
+    }
+    .header_title {
+        text-align: left;
+        padding-left: 20px;
+        padding-bottom: 30px;
+        font-size: 1.5rem;
+    } 
+    .nav {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        border: 0;
+        background-color: #f4d35e;
+        display: none;
+    }
+    .nav>.inner {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .header_menu {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .header_menu li {
+        width: 100%;
+        height: 20%;
+        border-right:0;
+    }
+    .header_menu li:first-child {
+        border-left: 0;
+    }
+    .header_menu li a {
+        color: #fff;
+        font-size: 1.5rem;
+        height: 100%;
+    }
+    .header_menu li:hover a{
+        background-color: #fff;
+        color: #f4d35e;
+    }
+    /* 헤더 영역 끝 */
+    /* 메인 비쥬얼 시작 */
+    .main_visual>.inner {
+        padding-top: 24vh;
+    }
+    .main_visual_img {
+        width: 70vw;
+        height: 70vw;
+        border: 2vw solid #fff;
+    }
+    .main_visual_img img {
+        width: 100%;
+        object-fit: cover;
+        vertical-align: top;
+    }
+    /* 메인 비쥬얼 끝 */
+
+    /* 강아지 견종 설명 시작 */
+    .dog_info_visual_wrap {
+        height: 80vw;
+    }
+    .dog_info_visual_wrap>ul>li {
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .dog_info_title span {
+        width: 60px;
+        height: 60px;
+        margin-left: 40px;
+    }
+    .dog_info_title span:hover {
+        -webkit-animation: shakingDog 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+                animation: shakingDog 1s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    }
+    .dog_info_img {
+        width: 100%;
+        height: 100%;
+    }
+    .dog_info_desc {
+        width: 100%;
+        height: 0;
+        position: relative;
+    }
+    .dog_info_desc_tit {
+        width: 90%;
+        position: absolute;
+        left: 50%;
+        bottom: 4vh;
+        transform: translateX(-50%);
+        font-size: 2vh;
+    }
+    /* 강아지 견종 설명 끝 */
+
+    /* 강아지 입양 정보 & 필요한 물품 시작 */
+    .adobt_information {
+        padding: 12vh 0;
+    }
+    .adobt_info_visual {
+        background: url(../img/adobt_info_bg.png);
+        /* 배경 바꾸기 */
+    }
+    .adobt_info_title {
+        padding: 1.5vh 2.5vh;
+        font-size: 2.2vh;
+    }
+
+    .adobt_info_family {
+        border: 8px solid #f4d35e;
+    }
+    .adobt_info_goods {
+        border: 8px solid #ee964b;
+    }
+    /* .dog_house {
+        width: 82px;
+        height: 82px;
+        border-radius: 50%;
+        top: 30%;
+        left: 20%;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    }
+    .dog_bowl {
+        top: 50%;
+        left: 40%;
+    }
+    .dog_food {
+        top: 20%;
+        right: 40%;
+    }
+    .dog_cushion {
+        bottom: 10%;
+        left: 20%;
+        transform: rotate(-10deg);
+    }
+    .dog_necklace {
+        right: 60px;
+        bottom: 50px;
+        transform: rotate(-5deg);
+    }
+    .dog_shampoo {
+        top: 50%;
+        right: 20%;
+        transform: rotate(10deg);
+    } */
+    .adobt_menu {
+        width: 34vw;
+        height: 34vw;
+    }
+    .adobt_info_family:hover {
+        -webkit-animation: unset;
+                animation: unset;
+    }
+    .adobt_info_goods:hover {
+        -webkit-animation: unset;
+                animation: unset;
+    }
+    .adobt_menu_name {
+        padding: 2vw 3.5vw;
+    }
+    /* 강아지 입양 정보 & 필요한 물품 끝 */
+
+    /* 강아지 양육 정보 시작 */
+    .bringup_information {
+
+    }
+    .bringup_information h2 {
+    }
+    .bringup_menu {
+
+    }
+    .bringup_menu button {
+
+    }
+    .bringup_menu>button:hover {
+        -webkit-animation: unset;
+            animation: unset;
+    }
+    .bringup_conts {
+        width: 100%;
+        height: 100%;
+    }
+    .bringup_conts>ul, .bringup_conts>ul>li {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+    .bringup_conts>ul {
+        width: 300%;
+    }
+    .bringup_conts>ul>li {
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .bringup_conts .common_info_img {
+        width: 100%;
+    }
+    .bringup_conts .common_desc {
+        width: 100%;
+    }
+    .traning_tit {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-left: 0;
+    }
+    .signal_tit {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-left: 0;
+    }
+    .know_tit {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-left: 0;
+    }
+    /* 강아지 양육 정보 끝 */
+}
+/* 미디어쿼리 태블릿 끝 */

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="윤미진">
+    <meta name="Keywords" content="반려견입양">
+    <meta name="Description" content="강아지와 함께 하고 싶은 초보 반려인을 위한 정보를 모아봤습니다.">
+
+    <!-- 오픈 그래프 메타태그 -->
+    <meta property="og:title" content="반려견 입양사전">
+    <meta property="og:url" content="웹페이지 URL"> 
+    <meta property="og:type" content="웹페이지 타입(blog, website 등)"> 
+    <meta property="og:image" content="표시되는 이미지">
+    <meta property="og:site_name" content="반려견 입양사전"> 
+    <meta property="og:description" content="강아지와 함께 하고 싶은 초보 반려인을 위한 정보를 모아봤습니다.">
+
+    <!-- 파비콘 -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="js/jquery-3.6.4.min.js"></script><!--제이쿼리-->
+    <script src="https://kit.fontawesome.com/9ba187d4f0.js" crossorigin="anonymous"></script><!--폰트어썸-->
+
+    <!-- GSAP 라이브러리 CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script><!--기본-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/MotionPathPlugin.min.js"></script><!--모션-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script><!--스크롤-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script><!--텍스트-->
+    <script src="js/GSAP.js"></script><!--실행문-->
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/scrollNav.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/adobt.js"></script>
+    <title>반려견 입양사전</title>
+</head>
+<body>
+    <header class="header">
+        <div class="inner">
+            <h1 class="header_title">반려견 입양사전</h1>
+        </div>
+        <nav class="nav">
+            <div class="inner">
+                <ul class="header_menu">
+                    <li>
+                        <a href="#">메인</a>
+                    </li>
+                    <li>
+                        <a href="#dog_information">강아지정보</a>
+                    </li>
+                    <li>
+                        <a href="#adobt_information">입양방법&필요한물품</a>
+                    </li>
+                    <li>
+                        <a href="#bringup_information">양육정보</a>
+                    </li>
+                    <li>
+                        <a href="#caution">주의사항</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- 메인페이지 메뉴 헤더 끝-->
+        <!-- 메인 비쥬얼 영역 시작 -->
+    <section class="main_visual">
+        <div class="inner">
+            <div class="main_visual_img">
+                <img src="img/main_visual.jpg" alt="메인 강아지 그림" id="main_visual_img">
+            </div>
+        </div>
+    </section>
+    <!-- 메인 비쥬얼 영역 끝 -->
+    <!-- 강아지 견종 설명 시작-->
+    <section class="dog_information common_container" id="dog_information">
+        <div class="inner">
+            <h2 class="dog_info_title common_title"></h2>
+            <div class="dog_info_visual_wrap common_visual_wrap">
+                <ul>
+                    <li>
+                        <div class="dog_info_img common_info maltese_img"><span class="txtBlind">말티즈 사진</span></div>
+                        <div class="dog_info_desc common_desc maltese_desc">
+                            <h3 class="dog_info_desc_tit">공주님같은 성격의 강아지 말티즈</h3>
+                            <p>작은 체구와 새하얀 털을 가진 귀엽고 사랑스러운 말티즈.
+                            말티즈는 "개들의 귀족"이라고 불릴 정도로 순수 관상용으로 길러진 견종이랍니다. 그러다보니 사람을 무척 좋아하며, 매우 활발하고 활기차게 뛰어 노는 것을 좋아해요. 
+                            또한 말티즈는 소형견 중에서도 작은편에 속하다보니 작은 공간에서도 잘 적응하며, 비교적 폐쇄적인 공간을 선호하는 성향을 가지고 있어 한국식 주거 생활에도 잘 적응 할 수 있답니다. 애교만점. 사교성 만점에 한국식 주거생활에도 적합하다보니 국내의 대부분의 조사에서도 선호견종 1위를 차지며, 한국의 많은 반려인들과 함께 지내고 있답니다.
+                            
+                            장점이 많은 말티즈는 초보 반려인이 함께 하기 좋아요 하지만 주의해야할 점도 있답니다. 말티즈는 다른 강아지들과 비교했을때 비교적 털빠짐이 적지만 장모에 단일모기 때문에 털이 얇아 자주 엉키기 쉽기 때문에 세심한 관리가 필수입니다.
+                            또 자기 주장이 강하고 고집이 있는 편이기 때문에 자신이 가지게 되는 목적이 달성 되어야 직성이 풀리는 성향이 있어요.
+                            '말티즈는 참지 않긔'라는 유명한 수식어가 생겼을정도로 말티즈는 관상용으로 여러 세대를 거치며 사랑을 듬뿍 받았기 때문에 애정이 깊은 사람에게는 더 질투와 응석이 심해지며 버릇이 나빠질 수 있기 때문에 잘 훈련해 주시는게 좋답니다.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dog_info_img poodle_img"><span class="txtBlind">푸들 사진</span></div>
+                        <div class="dog_info_desc poodle_desc">
+                            <h3 class="dog_info_desc_tit">곱슬곱슬한 털이 사랑스러운 똑똑이 푸들</h3>
+                            <p>
+                                푸들은 커다란 스텐다드 푸들부터 작은 토이 푸들까지 크기가 다양해요.
+                                원래 사냥개로 활동하던 품종인 푸들은 긴 다리를 가지고 있고, 흰색과 검정, 회색, 갈색, 살구색, 크림색 등 다양한 색상을 가지고 있어요. 푸들의 곱슬거리는 털은 털빠짐이 적어 가정에서 키우기 좋아요. 하지만 주의하세요! 긴 다리를 가진 푸들은 점프력이 뛰어나 높은 곳에 있는 음식을 먹을 지도 몰라요.
+                                
+                                그리고 푸들은 2019년 기준 세계 천재견 순위 2위를 차지할 정도로 강아지들 사이의 지능견이랍니다.
+                                활발하고 지능적인 성격이 특징인만큼, 육체적 활동과 지적 활동을 모두 충족시켜 주어야 해요.
+                                산책을 자주 시켜주시고 머리 쓰는 활동을 자주 해주세요.
+                                푸들은 보호자를 잘 따르는 성격을 가지고 있어서 보호자의 감정도 많이 공유하는 편이랍니다. 얼마나 사랑스러운 성격인지요. 하지만 보호자를 잘 따르는 만큼 분리불안이 걸리기도 쉽고, 사회화를 놓칠 경우 방어적인 성격이 공격성으로 나타날 수 있기 때문에 많은 관심과 훈련이 필요해요.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dog_info_img shihtzu_img"><span class="txtBlind">시츄 사진</span></div>
+                        <div class="dog_info_desc shihtzu_desc">
+                            <h3 class="dog_info_desc_tit">초롱초롱한 눈망울을 가진 대인배강아지 시츄</h3>
+                            <p>
+                            작은 체구와 새하얀 털을 가진 귀엽고 사랑스러운 말티즈.
+                            말티즈는 "개들의 귀족"이라고 불릴 정도로 순수 관상용으로 길러진 견종이랍니다. 그러다보니 사람을 무척 좋아하며, 매우 활발하고 활기차게 뛰어 노는 것을 좋아해요. 
+                            또한 말티즈는 소형견 중에서도 작은편에 속하다보니 작은 공간에서도 잘 적응하며, 비교적 폐쇄적인 공간을 선호하는 성향을 가지고 있어 한국식 주거 생활에도 잘 적응 할 수 있답니다. 애교만점. 사교성 만점에 한국식 주거생활에도 적합하다보니 국내의 대부분의 조사에서도 선호견종 1위를 차지며, 한국의 많은 반려인들과 함께 지내고 있답니다.
+                            
+                            장점이 많은 말티즈는 초보 반려인이 함께 하기 좋아요 하지만 주의해야할 점도 있답니다. 말티즈는 다른 강아지들과 비교했을때 비교적 털빠짐이 적지만 장모에 단일모기 때문에 털이 얇아 자주 엉키기 쉽기 때문에 세심한 관리가 필수입니다.
+                            또 자기 주장이 강하고 고집이 있는 편이기 때문에 자신이 가지게 되는 목적이 달성 되어야 직성이 풀리는 성향이 있어요.
+                            '말티즈는 참지 않긔'라는 유명한 수식어가 생겼을정도로 말티즈는 관상용으로 여러 세대를 거치며 사랑을 듬뿍 받았기 때문에 애정이 깊은 사람에게는 더 질투와 응석이 심해지며 버릇이 나빠질 수 있기 때문에 잘 훈련해 주시는게 좋답니다.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dog_info_img bichon_img"><span class="txtBlind">비숑 사진</span></div>
+                        <div class="dog_info_desc bichon_desc">
+                            <h3 class="dog_info_desc_tit">솜사탕 같은 멋쟁이 강아지 비숑프리제</h3>
+                            <p>
+                                푸들은 커다란 스텐다드 푸들부터 작은 토이 푸들까지 크기가 다양해요.
+                                원래 사냥개로 활동하던 품종인 푸들은 긴 다리를 가지고 있고, 흰색과 검정, 회색, 갈색, 살구색, 크림색 등 다양한 색상을 가지고 있어요. 푸들의 곱슬거리는 털은 털빠짐이 적어 가정에서 키우기 좋아요. 하지만 주의하세요! 긴 다리를 가진 푸들은 점프력이 뛰어나 높은 곳에 있는 음식을 먹을 지도 몰라요.
+                                
+                                그리고 푸들은 2019년 기준 세계 천재견 순위 2위를 차지할 정도로 강아지들 사이의 지능견이랍니다.
+                                활발하고 지능적인 성격이 특징인만큼, 육체적 활동과 지적 활동을 모두 충족시켜 주어야 해요.
+                                산책을 자주 시켜주시고 머리 쓰는 활동을 자주 해주세요.
+                                푸들은 보호자를 잘 따르는 성격을 가지고 있어서 보호자의 감정도 많이 공유하는 편이랍니다. 얼마나 사랑스러운 성격인지요. 하지만 보호자를 잘 따르는 만큼 분리불안이 걸리기도 쉽고, 사회화를 놓칠 경우 방어적인 성격이 공격성으로 나타날 수 있기 때문에 많은 관심과 훈련이 필요해요.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="dog_info_slideBtn">
+                    <button class="btn prev">&lt;<span class="txtBlind">이전 버튼</span></button>
+                    <button class="btn next">&gt;<span class="txtBlind">다음 버튼</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 강아지 견종 설명 끝-->
+    <!-- 강아지 입양 정보 & 필요한 물품 시작 -->
+    <section class="adobt_information" id="adobt_information">
+        <div class="inner">
+            <div class="adobt_info_visual">
+                <h2 class="adobt_info_title">반려견과 가족이 되기 위해</h2>
+                <div class="adobt_menu_name adobt_menu_01">
+                    가족이 되는 방법
+                </div>
+                <div class="adobt_menu_name adobt_menu_02">
+                    필요한 물품들
+                </div>
+                <div class="adobt_menu adobt_info_family">
+                    <div class="breeder">
+                        <figure>
+                            브리더
+                            <button class="plus_btn"><i class="fa-solid fa-plus"></i><span class="txtBlind">더보기</span></button>
+                            <figcaption>
+                                브리더에게 입양받는 법
+                            </figcaption>
+                        </figure>
+                        <div class="howto">
+                            <div class="howtoConts">
+                                <div class="howto_frame">
+                                    <div class="howto_frame_top">
+                                        <div class="howto_frame_profile"><img src="img/bichon_illust.png" alt="프로필이미지"></div>
+                                        <p>브리더<br> <span>
+                                            입양방법을 알아봅시다.
+                                        </span></p>
+                                    </div>
+                                    <div class="howto_frame_bottom">    
+                                        <i class="fa-regular fa-heart"></i>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </div>
+                                </div>
+                                <div class="howtoConts_txt_container">
+                                    <h4 class="howtoConts_title"><span>브리더란 ?</span>
+                                        <br>견종 보존을 위해 해당 견종에 대해 전문적인 지식을 가지고 올바르고 건강하게 개체를 번식시키는 사람을 말한다. 
+                                    </h4>
+                                    <p class="howtoConts_text">
+                                        브리더에게 반려견을 입양한다면 <br>
+                                        부모견을 확인 할 수 있기 때문에 그들의 건강과, 성격을 파악함으로 자견의 건강과 성격을 가늠해보는 것이 가능하며, 혈통서, 건강검진, 유전자 검사등을 통해 건강에 대한 높은 신뢰를 가질 수 있습니다.<br>
+                                        또한 태어난 어린 강아지들은 모견으로부터 배워야할 기본적인 것들을 배울 수 있으며, 브리더에게 사람과 함께 살면서 필요한 기본적인 훈련을 배우게 됩니다.<br>
+                                        때문에 신체적으로도 정서적으로도 건강한 반려견을 입양 할 수 있게 됩니다.
+                                        <br><br>
+                                        하지만 건강한 번식을 위해 브리더는 강제교배를 하지 않아 새끼 강아지를 기다리는데에 정해진 기한 없는 대기를 해야 할 수 있습니다. <br>
+                                        그리고 분양 전 다양한 건강관련 검사를 진행하기 때문에 분양비가 고가로 책정됩니다.  
+                                    </p>
+                                </div>
+                                <p>
+                                    ※ 브리딩이라는 이름으로 강아지를 판매하는 경우 강아지의 가격이 비싸지기 때문에 브리더인척하는 비윤리적인 퍼피밀(펫샵)과 백야드 브리더(가정분양업자)를 주의해야 합니다.
+                                </p>
+                                <button><i class='fa-solid fa-xmark'></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shelter">
+                        <figure>
+                            보호소
+                            <button class="plus_btn"><i class="fa-solid fa-plus"></i><span class="txtBlind">더보기</span></button>
+                            <figcaption>유기견 보호소에서 입양받는 법</figcaption>
+                        </figure>
+                        <div class="howto">
+                            <div class="howtoConts">
+                                <div class="howto_frame">
+                                    <div class="howto_frame_top">
+                                        <div class="howto_frame_profile"><img src="img/bichon_illust.png" alt="프로필이미지"></div>
+                                        <p>보호소<br> <span>
+                                            입양방법을 알아봅시다.
+                                        </span></p>
+                                    </div>
+                                    <div class="howto_frame_bottom">    
+                                        <i class="fa-regular fa-heart"></i>
+                                        <i class="fa-regular fa-comment"></i>
+                                    </div>
+                                </div>
+                                <div class="howtoConts_txt_container">
+                                    <h4 class="howtoConts_title"><span>보호소란 ?</span>
+                                        <br>견종 보존을 위해 해당 견종에 대해 전문적인 지식을 가지고 올바르고 건강하게 개체를 번식시키는 사람을 말한다. 
+                                    </h4>
+                                    <p class="howtoConts_text">
+                                        브리더에게 반려견을 입양한다면 <br>
+                                        부모견을 확인 할 수 있기 때문에 그들의 건강과, 성격을 파악함으로 자견의 건강과 성격을 가늠해보는 것이 가능하며, 혈통서, 건강검진, 유전자 검사등을 통해 건강에 대한 높은 신뢰를 가질 수 있습니다.<br>
+                                        또한 태어난 어린 강아지들은 모견으로부터 배워야할 기본적인 것들을 배울 수 있으며, 브리더에게 사람과 함께 살면서 필요한 기본적인 훈련을 배우게 됩니다.<br>
+                                        때문에 신체적으로도 정서적으로도 건강한 반려견을 입양 할 수 있게 됩니다.
+                                        <br><br>
+                                        하지만 건강한 번식을 위해 브리더는 강제교배를 하지 않아 새끼 강아지를 기다리는데에 정해진 기한 없는 대기를 해야 할 수 있습니다. <br>
+                                        그리고 분양 전 다양한 건강관련 검사를 진행하기 때문에 분양비가 고가로 책정됩니다.  
+                                    </p>
+                                </div>
+                                <p>
+                                    ※ 브리딩이라는 이름으로 강아지를 판매하는 경우 강아지의 가격이 비싸지기 때문에 브리더인척하는 비윤리적인 퍼피밀(펫샵)과 백야드 브리더(가정분양업자)를 주의해야 합니다.
+                                </p>
+                                <button><i class='fa-solid fa-xmark'></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="adobt_menu adobt_info_goods">
+                    <div class="dog_house">
+                        <img src="img/dog_house.png" alt="개집">
+                    </div>
+                    <div class="dog_bowl">
+                        <img src="img/dog_bowl.png" alt="개밥그릇">
+                    </div>
+                    <div class="dog_food">
+                        <img src="img/dog_food.png" alt="개밥">
+                    </div>
+                    <div class="dog_cushion">
+                        <img src="img/dog_cushion.png" alt="개쿠션">
+                    </div>
+                    <div class="dog_necklace">
+                        <img src="img/dog_necklace.png" alt="개목줄">
+                    </div>
+                    <div class="dog_shampoo">
+                        <img src="img/dog_shampoo.png" alt="개샴푸">
+                    </div>
+                </div>
+                <div class="star_img"></div>
+                <div class="heart_img"></div>
+                <button class='adobt_btn'>
+                    <i class='fa-solid fa-xmark'></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- 강아지 입양 정보 & 필요한 물품 끝-->
+    <!-- 강아지 양육 정보 시작 -->
+    <section class="bringup_information" id="bringup_information">
+        <div class="inner">
+            <h2>반려견 양육 TIP!</h2>
+            <div class="bringup_menu">
+                <button class="training_btn">간단한 강아지 훈련법</button>
+                <button class="signal_btn">카밍시그널</button>
+                <button class="small_know_btn">스몰지식</button>
+            </div>
+            <div class="bringup_visual_wrap common_visual_wrap">
+                <ul>
+                    <li class="bringup_conts training">
+                        <ul>
+                            <li class="training_sit">
+                                <div class="common_info_img"></div>
+                                <div class="common_desc">
+                                    <h3 class="traning_tit">앉아!</h3><br>
+                                    <span>훈련 준비</span>
+                                    <p>간식으로 강아지의 관심을 끈다.</p>
+                                    <span>훈련 진행</span>
+                                    <p>간식을 강아지 머리 위로 적당히 들어서 강아지가 자연스럽게 위를 쳐다보게 한다. 이때 너무 높게 들면 강아지가 두 발을 들고 스며, 너무 낮게 들면 강아지가 고개를 숙여 버린다.
+                                    적당한 각도로 간식을 들면 강아지가 자연스럽게 앉는 동작을 취한다. 이 때 아무 말도 할 필요가 없다. 강아지는 ‘앉아’라는 단어를 아직 모른다.
+                                    강아지가 앉은 후에는 칭찬과 간식으로 보상해준다.
+                                    </p>
+                                    <div class="txtBlind">
+                                        출처: https://mypetlife.co.kr/wiki/%EA%B0%95%EC%95%84%EC%A7%80-%EC%86%90-%ED%9B%88%EB%A0%A8/
+                                        비마이펫은 콘텐츠 무단 복제/모방에 있어 무관용의 법칙을 취하고 있습니다. 비마이펫의 모든 콘텐츠는 저작권법에 의해 보호를 받으며, 블로그, 카페, 홈페이지 혹은 인쇄 매체로의 전재 등의 무단 복제/모방 시 법무법인을 통하여 법적인 조치를 취할 예정입니다.
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="training_hand">
+                                <div class="common_info_img"></div>
+                                <div class="common_desc">
+                                    <h3 class="traning_tit">손!</h3><br>
+                                    <span>훈련 준비</span>
+                                    <p>강아지에게 앉아 자세를 시킨다.</p>
+                                    <span>훈련 시작</span>
+                                    <p>1. 간식을 보여줘 강아지의 관심을 끈다.<br>
+                                    2. 간식을 손안에 숨긴 후 강아지의 코 근처에 갖다 댄다. 간식을 갖다 대면 강아지가 킁킁 냄새를 맡기 시작할 것이다.<br>
+                                    3. 냄새를 맡아도 간식을 주지 않으면, 강아지는 어느새 손을 쓰게 된다. 이때 중형견/대형견일 경우 살짝 아플 수도 있다.<br>
+                                    4. 강아지가 손을 치는 순간 손바닥을 펼쳐 강아지에게 간식을 주며 보상한다.
+                                    <br>
+                                    5. 이를 반복하다보면 강아지가 간식을 숨긴 손을 보면, 손을 바로 갖다 댈 것이다. 이 때 ‘손’이라는 단어를 말하여 강아지에게 해당 단어를 가르친다.
+                                    <div class="txtBlind">
+                                        출처: https://mypetlife.co.kr/wiki/%EA%B0%95%EC%95%84%EC%A7%80-%EC%86%90-%ED%9B%88%EB%A0%A8/
+                                        비마이펫은 콘텐츠 무단 복제/모방에 있어 무관용의 법칙을 취하고 있습니다. 비마이펫의 모든 콘텐츠는 저작권법에 의해 보호를 받으며, 블로그, 카페, 홈페이지 혹은 인쇄 매체로의 전재 등의 무단 복제/모방 시 법무법인을 통하여 법적인 조치를 취할 예정입니다.
+                                    </div>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="training_wait">
+                                <div class="common_info_img"></div>
+                                <div class="common_desc">
+                                    <h3 class="traning_tit">
+                                        기다려!
+                                    </h3><br>
+                                    <span>훈련 준비</span>
+                                    <p>강아지에게 앉아 자세를 시킨다.</p>
+                                    <span>훈련 시작</span>
+                                    <p>1. 손바닥을 펼치며 제자리에서 강아지에게 ‘기다려’라고 말한다.<br>
+                                    2. 강아지가 바로 일어서지 않고 기다리면 강아지에게 간식으로 보상 해준다.<br>
+                                    3. 그 다음에는 기다려라고 말한 후에 한 발자국 물러선다.
+                                    <br>
+                                    4. 강아지가 따라오지 않고 기다리면 강아지에게 간식을 줘서 보상해준다.<br>
+                                    5. 위를 반복하되, 기다려라고 말한 후에 조금 더 멀리 물러나본다.<br>
+                                    6. 강아지가 기다리면 얼른 돌아와 간식을 주어 보상해준다.
+                                    </p>
+                                    <div class="txtBlind">
+                                    출처: https://mypetlife.co.kr/wiki/%EA%B0%95%EC%95%84%EC%A7%80-%EA%B8%B0%EB%8B%A4%EB%A0%A4-%ED%9B%88%EB%A0%A8/
+                                    비마이펫은 콘텐츠 무단 복제/모방에 있어 무관용의 법칙을 취하고 있습니다. 비마이펫의 모든 콘텐츠는 저작권법에 의해 보호를 받으며, 블로그, 카페, 홈페이지 혹은 인쇄 매체로의 전재 등의 무단 복제/모방 시 법무법인을 통하여 법적인 조치를 취할 예정입니다.
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="bringup_conts signal">
+                        <ul>
+                            <li class="signal_tilt">
+                                <div class="common_info_img"></div>
+                                <div class="common_desc">
+                                    <h3 class="signal_tit">갸우뚱?</h3><br>
+                                    <span>1. 반복 행동 습득</span><br>
+                                        <p>
+                                            - 귀여움을 표출하기 위한 행동 일 수 있어요
+                                            갸우뚱 하는 모습을 보고 우리가 자신의 행동에 웃음을 보이고 긍정적인 반응을 보이는 경우가 많기 때문에 
+                                            습득한 행동의 표현이 될 수 있어요
+                                        </p><br>
+                                    <span>2. 이해하고 싶은 공감</span><br>
+                                        <p>
+                                            - 연구에 따르면 강아지들은 사람들의 행복, 슬픔, 기쁨 그리고 화를 내는 것을 직관적으로 알 수 있다고 합니다.
+                                            내가 말하고 있는 모습을 보며 강아지가 갸우뚱 하고 있다면
+                                            자신이 좋아하는 산책이나 간식 같은 친숙한 단어와 음색을 구분하려고 할 수 있어요.
+                                        </p><br>
+                                    <span>3.기대감</span><br>
+                                        <p>
+                                            - 무언가를 기대할 때 갸우뚱하기도 해요
+                                        산책갈까? 와 같이 이해하는 특정 단어에 집중하고 확신하기 위해 기대에 차있습니다.
+                                        </p><br>
+                                    <span>4. 더 잘 듣기 위한 노력</span><br>
+                                        <p>
+                                            - 혼잡하고 시끄러운 장소에서 갸우뚱한다면,
+                                            무언가 집중하게 하는 소리가 들려서 더 잘 듣기 위해 갸우뚱하는 것일 수 있어요
+                                        </p>
+                                </div>
+                            </li>
+                            <li class="signal_lickingnose">
+                                <div class="common_info_img"></div>
+                                <div class="common_desc">
+                                    <h3 class="signal_tit">코핥기</h3><br>
+                                    <span>1. 불안감을 해소하기 위해</span><br>
+                                        <p>
+                                        - 긴장, 불안, 스트레스를 받았을 때 극복하기 위해 하는 행동이에요
+                                        강아지는 너무 불안하면 자신을 보호하기 위해 공격성으로 표현 할 수도 있어요
+                                        그러니 낯선 환경에서 너무 코를 핥는다면 안정을 찾을 수 있게 주의해주세요
+                                        </p><br>
+                                    <span>2. 냄새를 잘 맡기 위해</span><br>
+                                        <p>
+                                            - 강아지들이 후각이 발달한 것은 사실이지만, 종종 본인들의 후각을 더 예민하게 만들기 위해
+                                        코를 핥기도 한답니다.
+                                        신나는 산책을 할 때나 노즈워크를 하는 동안에 핥는 것은 후각을 더 촉진시키기 위한 것이니
+                                        걱정하지 않으셔도 될 것 같아요
+                                        </p><br>                                 <span>3. 코에 질병이 있을 때</span><br>
+                                        <p>
+                                            - 강아지의 코는 매우 중요한 부위에요. 그러니 세심한 관찰이 필요합니다.
+                                        코가 건조해지거나, 콧물이 흘러서, 또는 질병이 생겨서 핥는 것일 수 있으니
+                                        특별한 이유가 없는데 자주 핥는다면 세심히 관찰 후 꼭 병원에 방문해주세요
+                                        </p>
+                                </div>
+                            </li>
+                            <li class="signal_yawn">
+                                <div class="common_info_img"></div>
+                                <div class="common_desc">
+                                    <h3 class="signal_tit">하품</h3><br>
+                                    <span>1. 졸리다.</span><br>
+                                    <p>
+                                        - 강아지도 사람과 마찬가지로 졸리거나 피곤하다고 느낄 때 하품을 한답니다.
+	                                    강아지가 수면을 취하려 할 때 하품을 하려고 한다면 편하게 수면을 취할 수 있도록 환경을 조성해 주세요 
+                                    </p><br>
+                                    <span>2. 자신과 상대방의 흥분된 기분을 진정시키고 싶다.</span><br>
+                                    <p>
+                                        - 보호자가 꾸짖고 있을 때나, 자신에게 짖는 강아지를 마주했을 때 하품을 하는 경우는
+                                        기권, 항복의 의사를 표현하면서 상대를 진정시키기 위한 신호라고 볼 수 있어요 
+                                        하품을함으로서 자신은 싸우고 싶지 않다는 의지를 상대방에게 전하는 것이라고 해요
+                                    </p><br>
+                                    <span>3. 스트레스를 느끼고 있다.</span><br>
+                                    <p>
+                                        - 강아지는 스트레스를 받을 때도 하품을 할 수 있어요
+                                        강아지가 싫어하는 상황에 놓여졌을 때 자주 하품을 한다면 상당한 스트레스를 받고 있을 가능성이 커요
+                                        보호자와의 관계에서 강아지가 자주 하품을 하면 주의해서 살펴봐주세요
+                                        사랑하는 강아지가 싫어하는 행동을 하고 있을 수 있어요
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="bringup_conts small_know">
+                        <ul>
+                            <li class="know_walking">
+                                <div class="common_info_img"></div>
+                                <div class="common_desc">
+                                    <h3 class="know_tit">적정산책량</h3>
+                                    <p>
+                                        접종이 끝나는 4개월 이후쯤부터가 적당
+                                        그 이전에는 가방이나 유모차 천천히 외부자극을 늘려주세요
+                                        4~5개월이 가장 중요한 사회화시기
+                                        강아지의 산책 횟수나 시간에 대해 정확한 기준은 없어요
+                                        각각의 강아지마다 갖고있는 성향이나 신체적 요건에 따라 다르다고 할 수 있기 때문이에요
+                                        신체적 문제, 비만의 강아지가 보통의 건강한 강아지와 같은 양 산책 불가
+                                        강아지별 체력적 조건
+                                        성향
+                                        하지만 적어도 하루에 한번은 꼭 해주는게 좋아요
+                                        산책의 시간보다는 횟수가 더 중요
+                                        흥분하지 않고 침착함을 유지한 산책이 좋아요
+                                        펫티켓을 지켜주세요
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="know_sleep">
+                                <div class="common_info_img"></div>
+                                <div class="common_desc">
+                                    <h3 class="know_tit">평균수면시간</h3>
+                                    <p>
+                                        나이에따라 달라요
+                                        성견 - > 하루에 절반정도 약 12~ 14시간
+                                        적어도 10시간, 하루의 20%정도만 활동 나머지는 빈둥이
+                                        어린 강아지시기 - > 매일 쑥쑥 자라야하는 시기이기 때문에 많은 양의 에너지가 필요
+                                        평균 18~20시간정도 수면, 
+                                        갓태어난 강아지는 22시간, 나머지 시간은 밥먹는 시간
+                                        노견은 신진대사가 떨어져서 회복하는 시간이 많이 필요함 최대 18시간 수면
+                                        강아지 크기 -> 대형견이 중소형견에 비해 수면시간이 길다.
+                                        몸이 큰만큼 필요한 에너지가 더 많다고 해요 평균 18시간
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="know_water">
+                                <div class="common_info_img"></div>
+                                <div class="common_desc">
+                                    <h3 class="know_tit">적정수분섭취</h3>
+                                    <p>
+                                        사람에게도 중요한 물은
+                                        강아지에게도 매우 중요해요
+                                        음수량으로 강아지의 건강상태 체크 가능
+                                        평소 음수량 체크해두면 좋음 ->적게 혹은 많게마시면 문제가 생겼다고 의심할 수 있음
+
+                                        강아지 kg당 60~70ml정도
+                                        5kg 강아지는 하루에 300ml~350ml정도의 음수를 하는 것이 좋음
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="bringup_slideBtn">
+                    <button class="btn prev">&lt;<span class="txtBlind">이전 버튼</span></button>
+                    <button class="btn next">&gt;<span class="txtBlind">다음 버튼</span></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 강아지 양육 정보 끝-->
+    <!-- 강아지 주의사항 시작 -->
+    <section class="caution common_container" id="caution">
+        <div class="caution_line">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="inner">
+            <h2 class="caution_title common_title">주의사항</h2>
+            <div class="caution_visual_wrap common_visual_wrap">
+                <div class="cautionText_container">
+                    <div class="cautionText">
+                        <p>'초콜릿'　'포도'　'양파'　'과일씨'　'익힌뼈'는 절대 먹으면 안돼요</p>
+                    </div>
+                    <div class="cautionText">
+                        <p>산책시 배변은 꼭 수거해주시고, 리드줄을 잘 착용해 주세요</p>
+                    </div>
+                    <div class="cautionText">
+                        <p>어린 강아지때부터 잘 훈련시켜주시고, 규칙이 없는 생활은 피해주세요</p>
+                    </div>
+                    <div class="cautionText">
+                        <p>타인에게 불쾌감을 줄 수 있는 행동은 피해주시고 꼭 펫티켓을 지켜주세요</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 강아지 주의사항 끝 -->
+    <script>
+
+        ScrollTrigger.create({
+            trigger: ".main_visual",
+            start: "top",
+            end: "bottom",
+            pin: true,
+            pinSpacing: false
+        });
+
+    </script>
+</body>
+</html>
